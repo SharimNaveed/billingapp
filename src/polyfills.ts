@@ -1,7 +1,8 @@
-import 'core-js/es6';
 import 'core-js/es7/reflect';
 
-require('zone.js/dist/zone');
+import 'zone.js/dist/zone';
+// The following import fixes zone issues when Electron callbacks are used eg. Menu's.
+import 'zone.js/dist/zone-patch-electron';
 
 if (process.env.ENV === 'production') {
     // Production

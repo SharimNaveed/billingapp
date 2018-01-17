@@ -1,4 +1,4 @@
-import { Component, NgZone} from '@angular/core';
+import { Component } from '@angular/core';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -19,7 +19,7 @@ import '../assets/sass/style.scss';
 export class AppComponent {
     public heroes: Hero[];
 
-    constructor(private zone: NgZone) {
+    constructor( ) {
         Settings.initialize();
 
         if (fs.existsSync(Settings.dbPath)) {
@@ -110,8 +110,7 @@ export class AppComponent {
         const template: MenuItemConstructorOptions[] = [
             {
                 label: `Delete ${hero.name}`,
-                // NgZone.run() will be obsolete soon because of fix by Angular
-                click: () => this.zone.run(() => this.deleteHero(hero)),
+                click: () => this.deleteHero(hero),
             },
         ];
 
