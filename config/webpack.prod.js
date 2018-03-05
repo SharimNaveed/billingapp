@@ -1,7 +1,5 @@
 var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-const Uglify = require("uglifyjs-webpack-plugin");
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 
@@ -17,14 +15,9 @@ module.exports = webpackMerge(commonConfig, {
         chunkFilename: '[id].[hash].chunk.js'
     },
 
+    mode: 'production',
+
     plugins: [
-        new webpack.NoEmitOnErrorsPlugin(),
-        new Uglify({
-            mangle: {
-                keep_fnames: true
-            }
-        }),
-        new ExtractTextPlugin('[name].[hash].css'),
         new webpack.DefinePlugin({
         'process.env': {
             'ENV': JSON.stringify(ENV)

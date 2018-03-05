@@ -7,6 +7,8 @@ module.exports = {
         extensions: ['.ts', '.js']
     },
 
+    mode: 'development',
+
     externals: { sqlite3: 'commonjs sqlite3' },
 
     module: {

@@ -1,7 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var helpers = require('./helpers');
 
@@ -46,9 +45,6 @@ module.exports = {
                         loader: "style-loader"
                     },
                     {
-                        loader: "css-loader"
-                    },
-                    {
                         loader: 'postcss-loader', // Run post css actions
                         options: {
                             plugins: function () { // post css plugins, can be exported to postcss.config.js
@@ -70,16 +66,6 @@ module.exports = {
                     }
                 ]
 			},
-            {
-                test: /\.css$/,
-                exclude: helpers.root('src', 'app'),
-                use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
-            },
-            {
-                test: /\.css$/,
-                include: helpers.root('src', 'app'),
-                use: 'raw'
-            }
         ]
     },
 
@@ -90,7 +76,6 @@ module.exports = {
             'window.jQuery': 'jquery',
             Popper: ['popper.js', 'default'],
         }),
-        new webpack.optimize.CommonsChunkPlugin({name: ['app', 'vendor', 'polyfills']}),
         new HtmlWebpackPlugin({template: 'src/index.html'}),
 		new CopyWebpackPlugin([
             { from: 'src/assets/data/database\.*', to: 'assets/data/[name].[ext]' },
@@ -102,5 +87,4 @@ module.exports = {
     ],
 
     target:'electron-renderer'
-
 };
