@@ -1,7 +1,7 @@
 {
   "name": "angular5-electron-sqlite3-bootstrap4-webpack",
   "productName": "Angular5-Electron-Sqlite3-Bootstrap4-Webpack",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An Electron application using Angular 5+, Sqlite3, Bootstrap 4 and WebPack",
   "author": "pamtbaau",
   "main": "index.js",
@@ -62,7 +62,7 @@
     "@types/sqlite3": "^3.1.1",
     "angular2-template-loader": "^0.6.2",
     "autoprefixer": "^8.1.0",
-    "awesome-typescript-loader": "^3.5.0",
+    "awesome-typescript-loader": "^5.0.0-0",
     "copy-webpack-plugin": "^4.5.0",
     "electron": "^1.8.2",
     "electron-builder": "^20.2.0",
