@@ -1,4 +1,4 @@
-# Sample application using Angular 5, Electron, SQLite and Bootstrap 4 (beta2)
+# Sample application using Angular 5, Electron, SQLite, Bootstrap 4+ and Webpack 4
 
 It took me quite some time to figure out how to use SQLite database in an Electron application. Because of the difficulties I've encountered, I've been using sql.js and Lovefield as alternatives.
 
