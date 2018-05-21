@@ -98,7 +98,10 @@ export class AppComponent {
 
     public onMenu(hero: Hero) {
         const menu = this.initMenu(hero);
-        menu.popup();
+        // Since Electron v2.0 popup must have option parameter.
+        // See https://github.com/electron/electron/issues/12915
+        // {} compiles correct, but tslint throws error
+        menu.popup({});
     }
 
     private deleteHero(hero: Hero) {
