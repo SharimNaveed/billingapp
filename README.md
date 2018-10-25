@@ -1,4 +1,4 @@
-# Sample application using Angular 6+, Electron 2+, SQLite3 4+, Bootstrap 4+ and Webpack 4+
+# Sample application using Angular 7+, Electron 3+, SQLite3 4+, Bootstrap 4+ and Webpack 4+
 
 It took me quite some time to figure out how to use SQLite database in an Electron application. Because of the difficulties I've encountered, I've been using sql.js and Lovefield as alternatives.
 
@@ -19,7 +19,7 @@ Both Visual C++ Build Tools and Python 2.7 are required for [node-gyp](https://g
 For installation instructions see [node-gyp](https://github.com/nodejs/node-gyp).
 
 ## Quickstart
- 1. git clone https://github.com/pamtbaau/angular5-electron-sqlite3-bootstrap4-webpack.git
+ 1. git clone https://github.com/pamtbaau/angular7-electron3-sqlite3-bootstrap4-webpack4.git
  1. npm install
  1. npm run build:once
  1. npm start
