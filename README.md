@@ -19,7 +19,7 @@ Both Visual C++ Build Tools and Python 2.7 are required for [node-gyp](https://g
 For installation instructions see [node-gyp](https://github.com/nodejs/node-gyp).
 
 ## Quickstart
- 1. git clone https://github.com/pamtbaau/angular5-electron-sqlite3-bootstrap4-webpack.git
+ 1. git clone https://github.com/pamtbaau/angular7-electron3-sqlite3-bootstrap4-webpack4.git
  1. npm install
  1. npm run build:once
  1. npm start
