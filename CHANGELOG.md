@@ -1,3 +1,6 @@
+## 1.05 (2018-12-09)
+- Upgrade npm packages
+
 ## 1.04 (2018-10-25)
 - Upgrade npm packages
 
