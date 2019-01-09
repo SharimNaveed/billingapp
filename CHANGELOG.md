@@ -1,3 +1,7 @@
+## 1.06 (2019-01-09)
+- Mac: Fixed testing if app is in development mode
+- Update of README
+
 ## 1.05 (2018-12-09)
 - Upgrade npm packages
 

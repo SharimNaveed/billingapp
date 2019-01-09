@@ -36,7 +36,7 @@ export class Settings {
     private static settingsPath: string;
 
     /**
-     * Settings.initialize must be called a startup of application and determines the locations of database
+     * Settings.initialize must be called at startup of application and determines the locations of database
      *
      * @static
      * @memberof Settings
@@ -80,7 +80,7 @@ export class Settings {
                 Settings.settingsPath = path.join(remote.app.getPath('userData'), 'settings.json');
             }
 
-            const isDevMode = /electron/.test(path.basename(remote.app.getPath('exe'), '.exe'));
+            const isDevMode = /[eE]lectron/.test(path.basename(remote.app.getPath('exe'), '.exe'));
             if (isDevMode) {
                 Settings.dbFolder = path.join(appPath, Settings.dataSubFolder);
             } else {

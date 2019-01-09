@@ -1,7 +1,7 @@
 {
   "name": "angular7-electron-sqlite3-bootstrap4-webpack4",
   "productName": "Angular7-Electron-Sqlite3-Bootstrap4-Webpack4+",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "An Electron application using Angular 7+, Sqlite3, Bootstrap 4+ and WebPack 4+",
   "author": "pamtbaau",
   "main": "index.js",
