@@ -1,3 +1,9 @@
+## 1.07 (2019-03-03)
+- Upgrade packages.
+- Note: Keep electron at 4.0.3, else sqlite will not bind correctly. See electron-builder issue [#3660](https://github.com/electron-userland/electron-builder/issues/3660)
+- Remove obsolete parameter from menu.popup()
+- Add ChangeDetectorRef.detectChanges() to fix table not being updated after deletion of Hero.
+
 ## 1.06 (2019-01-09)
 - Mac: Fixed testing if app is in development mode
 - Update of README

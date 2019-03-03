@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -19,7 +19,7 @@ import '../assets/sass/style.scss';
 export class AppComponent {
     public heroes: Hero[];
 
-    constructor( ) {
+    constructor(private ref: ChangeDetectorRef) {
         Settings.initialize();
 
         if (fs.existsSync(Settings.dbPath)) {
@@ -93,15 +93,13 @@ export class AppComponent {
         Hero.getAll()
             .then((heroes) => {
                 this.heroes = heroes;
+                this.ref.detectChanges();
             });
     }
 
     public onMenu(hero: Hero) {
         const menu = this.initMenu(hero);
-        // Since Electron v2.0 popup must have option parameter.
-        // See https://github.com/electron/electron/issues/12915
-        // {} compiles correct, but tslint throws error
-        menu.popup({});
+        menu.popup();
     }
 
     private deleteHero(hero: Hero) {
