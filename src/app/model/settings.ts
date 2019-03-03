@@ -80,7 +80,8 @@ export class Settings {
                 Settings.settingsPath = path.join(remote.app.getPath('userData'), 'settings.json');
             }
 
-            const isDevMode = /[eE]lectron/.test(path.basename(remote.app.getPath('exe'), '.exe'));
+            const isDevMode = /^[eE]lectron$/.test(path.basename(remote.app.getPath('exe'), '.exe'));
+
             if (isDevMode) {
                 Settings.dbFolder = path.join(appPath, Settings.dataSubFolder);
             } else {
