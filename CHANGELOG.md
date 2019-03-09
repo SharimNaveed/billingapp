@@ -1,5 +1,5 @@
 ## 1.0.8 (2019-03-09)
-- Downgraded to Electron 3.1.6. Electron 4+ brakes Angulars change detection when using Electron Menus
+- Downgraded to Electron 3.1.6. Electron 4+ breaks Angular's change detection ([#1200](https://github.com/angular/zone.js/issues/1200)) when using Electron Menus.
 - Remove changeDetector (which resolved the above issue, but wasn't needed in Electron 3+)
 
 ## 1.07 (2019-03-03)
