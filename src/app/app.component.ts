@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component } from '@angular/core';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -19,7 +19,7 @@ import '../assets/sass/style.scss';
 export class AppComponent {
     public heroes: Hero[];
 
-    constructor(private ref: ChangeDetectorRef) {
+    constructor() {
         Settings.initialize();
 
         if (fs.existsSync(Settings.dbPath)) {
@@ -93,13 +93,12 @@ export class AppComponent {
         Hero.getAll()
             .then((heroes) => {
                 this.heroes = heroes;
-                this.ref.detectChanges();
             });
     }
 
     public onMenu(hero: Hero) {
         const menu = this.initMenu(hero);
-        menu.popup();
+        menu.popup({});
     }
 
     private deleteHero(hero: Hero) {

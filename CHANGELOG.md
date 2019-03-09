@@ -1,3 +1,7 @@
+## 1.0.8 (2019-03-09)
+- Downgraded to Electron 3.1.6. Electron 4+ brakes Angulars change detection when using Electron Menus
+- Remove changeDetector (which resolved the above issue, but wasn't needed in Electron 3+)
+
 ## 1.07 (2019-03-03)
 - Upgrade packages.
 - Note: Keep electron at 4.0.3, else sqlite will not bind correctly. See electron-builder issue [#3660](https://github.com/electron-userland/electron-builder/issues/3660)
