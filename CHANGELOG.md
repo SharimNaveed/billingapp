@@ -13,8 +13,15 @@
          }
       )
       ```
-- An upgrade of `core-js` to 3+ introduces an error when starting the application. A new import in `polyfill.ts` is required:
-```import 'core-js/proposals/reflect-metadata';```
+- An upgrade of `core-js` to 3+ introduces a few issues that require updates to `polyfill.ts`:
+   - A new import in `polyfill.ts` is required to fix an application error:
+   ```
+      import 'core-js/proposals/reflect-metadata';
+   ```
+   - Path of import of `reflect` has changed:
+      ```
+      import 'core-js/es/reflect';  // 'es7' has changed into 'es'
+      ```
 - Added `codelyzer` (checks code style of Angular) and fixed a few linting errors.
 
 ### Note:
