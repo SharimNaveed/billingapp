@@ -1,3 +1,5 @@
+# Changelog
+
 ## 1.0.9 (2019-07-27)
 - Upgrade Angular to 8.1.2
 - Upgrade Electron to 5.0.7
