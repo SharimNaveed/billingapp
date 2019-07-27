@@ -119,47 +119,41 @@
         /*
          * Any rules specified here will override those from the base config we are extending
          */
-        "max-classes-per-file": [
-            false
-        ],
+        "max-classes-per-file": false,
         "prefer-conditional-expression": false,
         "import-spacing": false,
 
         /*
          * Rules for Codelyzer
          */
-        // The rule have the following arguments:
-        // [ENABLED, "attribute" | "element", "selectorPrefix" | ["listOfPrefixes"], "camelCase" | "kebab-case"]
-        "directive-selector": [
-            false,
-            "attribute",
-            [
-                "fin",
-                "dir-prefix2"
-            ],
-            "camelCase"
-        ],
+
+        // The rules component-selector and directive-selector have the following arguments:
+        // [ENABLED, "attribute" | "element", "prefix" | ["listOfPrefixes"], "camelCase" | "kebab-case"]
         "component-selector": [
-            false,
+            true,
             "element",
-            [
-                "fin",
-                "cmp-prefix2"
-            ],
+            "mycmp",
             "kebab-case"
         ],
-        "use-input-property-decorator": true,
-        "use-output-property-decorator": true,
-        "use-host-property-decorator": true,
-        "no-attribute-parameter-decorator": true,
+        "directive-selector": [
+            true,
+            "attribute",
+            "mydir",
+            "camelCase"
+        ],
+        "component-max-inline-declarations": true,
+        "no-host-metadata-property": true,
         "no-input-rename": true,
+        "no-inputs-metadata-property": true,
+        "no-output-on-prefix": true,
         "no-output-rename": true,
-        "no-output-on-prefix-name": true,
-        "no-forward-ref": true,
-        "use-life-cycle-interface": true,
-        "use-pipe-transform-interface": true,
-        // [ENABLED, "SUFFIX"]
-        // Where "SUFFIX" is your custom suffix, for instance "Page" for Ionic 2 components.
+        "no-outputs-metadata-property": true,
+        "no-queries-metadata-property": true,
+        "prefer-inline-decorator": true,
+        "use-lifecycle-interface": true,
+        // The rules component-class-suffix and directive-class-suffix have the following arguments:
+        // [ENABLED, "suffix" | ["listOfSuffixes"]]
+        // Where "suffix" is/are your custom(s) suffix(es), for instance "Page" for Ionic components.
         "component-class-suffix": [
             true,
             "Component"
@@ -167,9 +161,7 @@
         "directive-class-suffix": [
             true,
             "Directive"
-        ],
-        "templates-use-public": true,
-        "invoke-injectable": true
+        ]
     },
     "rulesDirectory": [
         /*

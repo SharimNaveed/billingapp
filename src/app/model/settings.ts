@@ -14,7 +14,7 @@ import { remote } from 'electron';
 export class Settings {
     /** Folder where data files are located */
     public static dbFolder: string;
-    /** Path to database file used by application*/
+    /** Path to database file used by application */
     public static dbPath: string;
     /** Determines if database location can be set by user (false), or is fixed by application (true). */
     public static hasFixedDbLocation = false;

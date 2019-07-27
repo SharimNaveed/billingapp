@@ -13,7 +13,7 @@ import { TheDb } from './model/thedb';
 import '../assets/sass/style.scss';
 
 @Component({
-    selector: 'app',
+    selector: 'mycmp-app',
     templateUrl: 'app.component.html',
 })
 export class AppComponent {

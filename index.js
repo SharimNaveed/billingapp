@@ -1,6 +1,6 @@
 'use strict';
 
-const {app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 
 let waitBeforeClose = true;
@@ -24,7 +24,12 @@ let mainWindow;
 
 let createWindow = () => {
 	// Create the browser window.
-	mainWindow = new BrowserWindow({show: false});
+	mainWindow = new BrowserWindow({
+		show: false,
+		webPreferences: {
+			nodeIntegration: true
+		}
+	});
 	mainWindow.once('ready-to-show', () => {
 		mainWindow.show()
 	});
