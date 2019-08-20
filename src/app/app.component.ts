@@ -48,7 +48,7 @@ export class AppComponent {
             });
     }
 
-    public createDb(filename?: string) {
+    public async createDb(filename?: string) {
         if (!filename) {
             const options: OpenDialogOptions = {
                 title: 'Create file',
@@ -60,7 +60,7 @@ export class AppComponent {
                     },
                 ],
             };
-            filename = remote.dialog.showSaveDialog(remote.getCurrentWindow(), options);
+            filename = await remote.dialog.showSaveDialogSync(remote.getCurrentWindow(), options);
         }
 
         if (!filename) {

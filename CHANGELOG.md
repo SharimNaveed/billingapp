@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.10 (2019-08-20)
+- Upgrade Angular to 8.2.2
+- Upgrade Electron to 6.0.3
+  - `dialog.dialog.showSaveDialog()` is now returning a Promise containing a path. Now using `dialog.showSaveDialogSync()` to use the old synchronous behaviour.
+- Upgrade all packages.
+
 ## 1.0.9 (2019-07-27)
 - Upgrade Angular to 8.1.2
 - Upgrade Electron to 5.0.7
