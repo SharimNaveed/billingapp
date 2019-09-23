@@ -1,7 +1,17 @@
 @import 'bootstrap-custom';
 @import 'bootstrap';
+@import "indigo-pink.css";
 
 html, body {
     height: 100%;
     margin: 0;
 }
+
+#maintemplate {
+    max-width: 80%;
+    margin: 2em auto;
+  }
+  
+  .otherCard {
+    max-width: 100%;
+  }

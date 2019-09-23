@@ -5,7 +5,7 @@ import * as path from 'path';
 // tslint:disable-next-line:no-implicit-dependencies
 import { Menu, MenuItemConstructorOptions, OpenDialogOptions, remote } from 'electron';
 
-import { Hero } from './model/hero';
+import { Product } from './model/product';
 import { Settings } from './model/settings';
 import { TheDb } from './model/thedb';
 
@@ -17,7 +17,8 @@ import '../assets/sass/style.scss';
     templateUrl: 'app.component.html',
 })
 export class AppComponent {
-    public heroes: Hero[];
+    public heroes: Product[];
+    heroName: string;
 
     constructor() {
         Settings.initialize();
@@ -90,23 +91,23 @@ export class AppComponent {
     }
 
     public getHeroes() {
-        Hero.getAll()
+        Product.getAll()
             .then((heroes) => {
                 this.heroes = heroes;
             });
     }
 
-    public onMenu(hero: Hero) {
+    public onMenu(hero: Product) {
         const menu = this.initMenu(hero);
         menu.popup({});
     }
 
-    private deleteHero(hero: Hero) {
+    private deleteHero(hero: Product) {
         hero.delete();
         this.getHeroes();
     }
 
-    private initMenu(hero: Hero): Menu {
+    private initMenu(hero: Product): Menu {
         const template: MenuItemConstructorOptions[] = [
             {
                 label: `Delete ${hero.name}`,

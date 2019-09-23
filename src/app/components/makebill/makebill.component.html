@@ -1,0 +1,56 @@
+<!-- <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Company (disabled)" disabled value="Google">
+    </mat-form-field>
+  
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <input matInput placeholder="First name">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <input matInput placeholder="Long Last Name That Will Be Truncated">
+      </mat-form-field></td>
+    </tr></table>
+  
+    <p>
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Address 2"></textarea>
+      </mat-form-field>
+    </p>
+  
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <input matInput placeholder="City">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <input matInput placeholder="State">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <input matInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+        <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+      </mat-form-field></td>
+    </tr></table>
+    <div>
+      <h4>mat-select</h4>
+<mat-form-field>
+  <mat-label>State</mat-label>
+  <mat-select>
+    <mat-option>None</mat-option>
+    <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+  </mat-select>
+</mat-form-field>
+    </div>
+    <button mat-mini-fab color="primary">+</button>
+  </form>   -->
+
+  <h4>mat-select</h4>
+  <ul style="list-style: none;">
+    <li *ngFor="let unit of units">
+        <app-billcard class="card" [states]="states" ></app-billcard>
+    </li>
+    </ul>
+
+    <button mat-mini-fab color="primary" (click)="addUnit()">+</button>

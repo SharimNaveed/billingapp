@@ -1,0 +1,43 @@
+
+
+<!--     <div class='card-body'>
+      <span class= 'col-sm-2'></span>
+      <span class= 'col-sm-8'><input type="text" name = "newItem" ></span>
+      <span class= 'col-sm-2'><button>Add New Product</button></span>
+    </div> -->
+<!-- <app-productcard></app-productcard> -->
+<style>
+        .section-1 {
+            width: 50%;
+        }
+        .section-2 {
+            width: 5%;
+        }
+        .section-3 {
+              width: 20%
+        }
+        .section-4 {
+              width: 10%
+        }
+    </style>
+<mat-card>
+            <div class="row">
+                    <span class='section-2'></span>
+                    <span class="section-2">Number</span>
+                    <span class="section-1">Product Name</span>
+                    <span class='section-3'>Price</span>
+                    <span class='section-4'></span>
+            </div>        
+</mat-card>   
+<mat-card *ngFor="let product of products let i=index">   
+        <app-productcard  [prouductComponent]="this"  [index]="i" [product]="product"></app-productcard>
+</mat-card>
+
+<!-- <ol >
+    <li *ngFor="let product of products">
+        <app-productcard class="card" [product]="product"></app-productcard>
+    </li>
+    </ol> -->
+    <button mat-raised-button mat-mini-fab color="primary" (click)="openDialog()">+</button>
+  
+    

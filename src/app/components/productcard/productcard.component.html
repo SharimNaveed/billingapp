@@ -1,0 +1,27 @@
+<style>
+            .section-1 {
+                width: 50%;
+            }
+            .section-2 {
+                width: 5%;
+            }
+            .section-3 {
+                  width: 20%
+            }
+            .section-4 {
+                  width: 10%
+            }
+        </style>
+<div class="row">
+      <span class='section-2'></span>
+      <span class="section-2">{{index}}.</span>
+      <span class="section-1">{{product?.name}}</span>
+      <span class='section-3'>{{product?.price}}</span>
+      <span class='section-4'></span>
+      <button mat-icon-button (click)="deleteProduct()">
+                  <mat-icon>delete</mat-icon>
+      </button>
+      <button mat-icon-button (click)="openDialog()">
+                  <mat-icon>edit</mat-icon>
+      </button> 
+</div>          

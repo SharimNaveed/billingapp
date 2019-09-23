@@ -1,4 +1,5 @@
 import 'core-js/es/reflect';
+import 'hammerjs';
 import 'core-js/proposals/reflect-metadata';
 
 import 'zone.js/dist/zone';

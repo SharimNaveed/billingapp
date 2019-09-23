@@ -209,7 +209,7 @@ export class TheDb {
             .then(() => TheDb.importJson(dataPath, false))
             .then(TheDb.setPragmaVersion)
             .then(() => {
-                console.log('Database created.');
+                console.log('Database created.' + dbPath);
                 return dbPath;
             });
     }

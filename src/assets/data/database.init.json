@@ -2,26 +2,31 @@
     "name": "./database.db",
     "version": 1,
     "tables": {
-        "hero": [
+        "products": [
 		    {
 		        "id": "11",
-		        "name": "Mr. Nice"
+		        "name": "Mr. Nice",
+				"price": "12"
 		    },
 		    {
 		        "id": "12",
-		        "name": "Narco"
+		        "name": "Narco",
+				"price": "12"
 		    },
 		    {
 		        "id": "13",
-		        "name": "Bombasto"
+		        "name": "Bombasto",
+				"price": "12"
 		    },
 		    {
 		        "id": "14",
-		        "name": "Celeritas"
+		        "name": "Celeritas",
+				"price": "12"
 		    },
 		    {
 		        "id": "15",
-		        "name": "Magneta"
+		        "name": "Magneta",
+				"price": "12"
 		    }
 		]
 	}

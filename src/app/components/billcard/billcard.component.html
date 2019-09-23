@@ -1,0 +1,10 @@
+<div class="d-flex flex-row">
+<mat-form-field>  
+  <mat-label>State</mat-label>
+  <mat-select>
+    <mat-option>None</mat-option>
+    <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+  </mat-select>
+</mat-form-field>
+<input matInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+</div>

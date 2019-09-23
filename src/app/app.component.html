@@ -1,10 +1,11 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Navbar</a>
+<!--<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">New Bill</a>
+    <a class="navbar-brand" href="#">Products</a>
+    <a class="navbar-brand" href="#">Bill History</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -66,7 +67,17 @@
     </div>
     <div class="row">
         <div class="col">
+            <div>
+                <input type="text" [(ngModel)]="heroName" [ngModelOptions]="{standalone: true}">
+                <button (click)="addHero()">Add Hero</button>
+            </div>
             <button class="btn btn-outline-primary" (click)="onRestoreDb()">Restore Db</button>
-        </div>
+        </div><app-product></app-product>
+
     </div>
-</div>
+</div>-->
+
+<app-header></app-header>
+<mat-card id="maintemplate">
+    <router-outlet></router-outlet>
+</mat-card>

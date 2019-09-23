@@ -62,6 +62,7 @@ export class Settings {
             JSON.stringify({
                 dbPath: Settings.dbPath,
             }, undefined, 4));
+            console.log(Settings.dbPath);
     }
 
     private static getPaths() {
